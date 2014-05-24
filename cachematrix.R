@@ -10,8 +10,8 @@ makeCacheMatrix <- function(x = matrix()) {
                 invm <<- NULL
         }
         get <- function() x
-        seeinvm <- function(mean) invm <<- mean
-        getinvm <- function() m
+        setinvm <- function(solve) invm <<- solve
+        getinvm <- function() invm
         list(set = set, get = get,
              setinvm = setinvm,
              getinvm = getinvm)
